@@ -1,0 +1,23 @@
+# Carpeta de entorno virtual (¡muy importante!)
+env/
+
+# Archivos del sistema (macOS)
+.DS_Store
+
+# Archivos y carpetas temporales
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de entrenamiento y modelos
+ppo_mario_final.zip
+*.zip
+logs/
+tmp/
+board/
+*.monitor.csv
+*.tfevents.*
+
+# Configuración del editor
+.vscode/
