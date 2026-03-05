@@ -1,0 +1,12 @@
+gym==0.21.0
+gym-super-mario-bros==7.4.0
+nes-py==8.2.1
+stable-baselines3==1.8.0
+torch
+numpy
+opencv-python
+matplotlib
+pandas
+tqdm
+qrcode
+Pillow

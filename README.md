@@ -43,7 +43,7 @@ Entrenar y evaluar un agente capaz de avanzar de forma consistente en el nivel 1
 python3 -m venv env
 source env/bin/activate
 pip install --upgrade pip
-pip install gym gym-super-mario-bros nes-py stable-baselines3 torch opencv-python numpy matplotlib tqdm
+pip install -r requirements.txt
 ```
 
 ## 🏋️ Entrenamiento
