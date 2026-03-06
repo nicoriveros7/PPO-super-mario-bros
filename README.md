@@ -94,6 +94,28 @@ El pipeline de entrenamiento incluye:
 
 Este enfoque permite estabilizar el entrenamiento y guiar al agente hacia comportamientos útiles dentro del entorno.
 
+## 🧪 Training Setup
+
+El agente fue entrenado utilizando **Proximal Policy Optimization (PPO)** con una arquitectura CNN personalizada y un entorno preprocesado para reducir la dimensionalidad del problema.
+
+Configuración principal del entrenamiento:
+
+- Environment: `SuperMarioBros-1-1-v0`
+- Action space: `SIMPLE_MOVEMENT`
+- Total timesteps: **5,000,000**
+- Evaluation frequency: **cada 200,000 pasos**
+- Learning rate: **0.0001**
+- Gamma (discount factor): **0.9**
+- Entropy coefficient: **0.01**
+- Steps per rollout: **512**
+- Batch size: **64**
+- Epochs por actualización: **10**
+
+Durante el entrenamiento se aplicaron técnicas de **reward shaping**, recompensando el progreso horizontal (`x_pos`) y penalizando la inactividad o la pérdida de vida. Esto permitió acelerar el aprendizaje y evitar comportamientos degenerados.
+
+El entrenamiento se ejecutó en **Apple Silicon utilizando aceleración MPS**, con fallback automático a CPU si el dispositivo no estaba disponible.
+
+
 ## 📊 Resultados
 
 Resultados obtenidos durante el entrenamiento del agente:
