@@ -2,6 +2,13 @@
 
 Proyecto de aprendizaje por refuerzo que entrena un agente con **PPO (Proximal Policy Optimization)** para jugar **Super Mario Bros 1-1** usando `gym-super-mario-bros` y `stable-baselines3`.
 
+![Mario PPO Demo](assets/GIF_mario_ppo.gif)
+
+Video completo:  
+[https://youtube.com/TU_VIDEO_AQUI](https://youtu.be/G2IWO-ttQWU?si=51PdL5CmNTxr2rNI)
+
+---
+
 ## 🎯 Objetivo
 Entrenar y evaluar un agente capaz de avanzar de forma consistente en el nivel 1-1, maximizando recompensa mediante una política CNN y una función de recompensa personalizada.
 
