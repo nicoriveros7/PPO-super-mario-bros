@@ -129,6 +129,13 @@ Durante el entrenamiento el agente mostró una curva de aprendizaje estable, inc
 El uso de preprocesamiento de imágenes, frame stacking y reward shaping permitió mejorar la estabilidad del entrenamiento y guiar al agente hacia comportamientos efectivos como anticipar tuberías, evitar enemigos y ejecutar saltos precisos.
 
 
+### Training Progress
+
+La siguiente gráfica muestra la evolución de la recompensa promedio durante el entrenamiento del agente con PPO.
+
+![Training Progress](assets/training_progress.png)
+
+
 ## 🧪 Reproducibilidad
 Para mejorar reproducibilidad en una versión futura:
 - Fijar seeds (`numpy`, `torch`, entorno)
