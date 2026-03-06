@@ -12,8 +12,7 @@ Proyecto de aprendizaje por refuerzo que entrena un agente con **PPO (Proximal P
 
 
 🎥 **Video completo del agente jugando:**  
-[https://youtu.be/G2IWO-ttQWU
-(https://youtu.be/G2IWO-ttQWU?si=51PdL5CmNTxr2rNI)](https://youtu.be/G2IWO-ttQWU)
+https://youtu.be/G2IWO-ttQWU
 
 ---
 
@@ -129,3 +128,11 @@ Para mejorar reproducibilidad en una versión futura:
 Nicolás Riveros
 
 Si usas este repositorio como base, cita el proyecto y mantén trazabilidad de cambios experimentales.
+
+## 📚 Referencias
+
+Este proyecto se basa en herramientas y trabajos previos de la comunidad de reinforcement learning:
+
+- Stable Baselines3: https://github.com/DLR-RM/stable-baselines3
+- Gym Super Mario Bros environment: https://github.com/Kautenja/gym-super-mario-bros
+- Inspiración en implementaciones de PPO aplicadas a Super Mario Bros disponibles en la comunidad open-source.
