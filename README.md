@@ -1,13 +1,19 @@
 # Mario PPO Agent (Super Mario Bros 1-1)
 
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Reinforcement Learning](https://img.shields.io/badge/Reinforcement%20Learning-PPO-green)
+![Framework](https://img.shields.io/badge/Stable--Baselines3-orange)
+![Environment](https://img.shields.io/badge/Gym-SuperMarioBros-red)
+
 Proyecto de aprendizaje por refuerzo que entrena un agente con **PPO (Proximal Policy Optimization)** para jugar **Super Mario Bros 1-1** usando `gym-super-mario-bros` y `stable-baselines3`.
 
 
 ![Mario PPO Demo](assets/GIF_mario_ppo.gif)
 
 
-Video completo:  
-[https://youtube.com/TU_VIDEO_AQUI](https://youtu.be/G2IWO-ttQWU?si=51PdL5CmNTxr2rNI)
+🎥 **Video completo del agente jugando:**  
+[https://youtu.be/G2IWO-ttQWU
+(https://youtu.be/G2IWO-ttQWU?si=51PdL5CmNTxr2rNI)](https://youtu.be/G2IWO-ttQWU)
 
 ---
 
@@ -75,12 +81,32 @@ python runNotebook2.py
 python graph.py
 ```
 
-## 📌 Métricas recomendadas para reportar
-Para publicar resultados en GitHub/LinkedIn, reporta al menos:
-- Recompensa promedio por bloque de entrenamiento
-- Mejor recompensa alcanzada
-- Pasos/timesteps totales de entrenamiento
-- Progreso máximo (`x_pos`) y si alcanzó la bandera (`flag_get`)
+## ⚙️ Cómo funciona el agente
+
+El agente utiliza una política convolucional entrenada con PPO que observa el estado del juego a través de frames preprocesados.
+
+El pipeline de entrenamiento incluye:
+
+1. Preprocesamiento de imágenes del entorno
+2. Apilado temporal de frames
+3. Reward shaping basado en progreso horizontal
+4. Entrenamiento PPO con Stable-Baselines3
+5. Evaluación periódica mediante callbacks
+
+Este enfoque permite estabilizar el entrenamiento y guiar al agente hacia comportamientos útiles dentro del entorno.
+
+## 📊 Resultados
+
+Resultados obtenidos durante el entrenamiento del agente:
+
+- Timesteps totales de entrenamiento: **5,000,000**
+- Recompensa promedio alcanzada: **> 800**
+- Mejor recompensa observada (evaluación final): **986.9**
+- Bandera alcanzada (`flag_get`): **Sí — el agente completa el nivel 1-1 de forma consistente**
+
+Durante el entrenamiento el agente mostró una curva de aprendizaje estable, incrementando progresivamente la recompensa a medida que aprendía a avanzar en el nivel.  
+El uso de preprocesamiento de imágenes, frame stacking y reward shaping permitió mejorar la estabilidad del entrenamiento y guiar al agente hacia comportamientos efectivos como anticipar tuberías, evitar enemigos y ejecutar saltos precisos.
+
 
 ## 🧪 Reproducibilidad
 Para mejorar reproducibilidad en una versión futura:
